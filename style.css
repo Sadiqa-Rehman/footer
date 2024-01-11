@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+
+/*----------------------------
+clock  start
+------------------------------*/
+
+#clock {
+ color: #4bff0d;
+    font-size: 55px;
+    width: 359px;
+    margin: 79px;
+    text-align: center;
+    border: 8px  ;
+ /* multicolor bg */
+ background:linear-gradient(90deg, Red, Orange, Yellow, Green, Blue, Indigo,violet);
+   
+    border-radius: 41px;
+}
+
+/*----------------------------
+clock  end
+------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    background-color: rgb(15, 14, 14);
+}
+
+.footer-section h2 {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.footer-section h2::after {
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background: #940dee;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+}
+
+.footer-section p {
+    transition: all .2s linear;
+    margin-bottom: .6em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-section p:hover {
+    transition: all .2s linear;
+    transform: translateX(4px);
+}
+
+.footer-section a:hover {
+    color:  #9f42de;
+}
+
+.footer-item {
+    margin: 1rem;
+}
+
+.footer-item ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.footer-item li {
+    margin-right: 1rem;
+}
+
+.social ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.social ul li:hover {
+    color: #9f42de;
+    transform: scale(1.1);
+    transition: all .2s linear;
+}
+
+@media screen and (max-width: 320px) {
+    .footer-section {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 2rem;
+    }
+
+    #clock{
+        margin: 5px;
+        font-size: 40px;
+        width: 264px;
+    }
+}
+
+

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Responsive Footer </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!---------------------------------------
+               start of clock
+    -------------------------------------->
+    
+    <div id="clock">8: 10: 45 </div>
+
+ <!---------------------------------------
+               end of clock
+    -------------------------------------->
+ <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime rerum soluta, eum est quaerat et possimus fugit sapiente consequuntur sit amet aliquam fuga dolor incidunt exercitationem molestias dignissimos dolorem optio.
+    Nulla quia eos, quidem nesciunt totam excepturi accusantium et exercitationem porro, cum architecto fuga iusto repellat veritatis reiciendis hic quasi magnam perspiciatis similique nihil soluta optio ea. Libero, voluptatum dolor!
+    Inventore aspernatur autem voluptate incidunt assumenda! Eveniet, nihil obcaecati, fugiat quasi inventore impedit deleniti quam officiis doloremque, tenetur praesentium tempora pariatur enim sint recusandae nesciunt delectus modi corporis aliquam cum?
+    Itaque id quaerat explicabo alias. Incidunt culpa vero consequatur cupiditate tempore, fugit quam necessitatibus fuga aspernatur error quia vitae ea? Assumenda nemo ratione aliquid, aspernatur ea eveniet id nulla quasi?
+    Sunt tempora dolorum dolorem dolores, laborum sit minima maxime sequi porro quasi consequatur alias voluptas quas amet pariatur beatae illo fugiat quae minus velit iste provident! Voluptatibus doloribus harum ex?
+    Amet fugiat eos, itaque necessitatibus odit magni facere sit dicta quae omnis atque, rem doloremque corrupti eaque quis laboriosam asperiores. Eligendi doloremque obcaecati magnam ullam deserunt et sunt odio repellat!
+    Facere excepturi nostrum harum consectetur iusto, unde minima quae deleniti aspernatur voluptatem magnam nulla veritatis exercitationem atque praesentium. Velit quia sunt illo officia nihil quae, debitis soluta recusandae tenetur accusamus?
+    Modi eligendi sit iure nostrum cupiditate aspernatur deleniti nam, corrupti doloribus at omnis laboriosam repellat veniam illo voluptates quod molestiae! Doloribus mollitia dolor praesentium impedit dolores. Ipsa libero totam quas?
+    Nam consequuntur dolore praesentium cumque harum, pariatur sapiente officiis. Quisquam culpa, labore nobis eligendi eum doloremque perferendis nulla assumenda maxime error ipsam amet commodi sit, recusandae ipsa quod facilis repellendus.
+    
+ </p>
+
+    <!--------------------------------------
+         start of footer
+    ----------------------------------------->
+    <div class="footer-section">
+        <div class="footer-item">
+            <h2>Company</h2>
+            <p><a href=""> About Us</a></p>
+            <p><a href=""> Contact Us</a></p>
+            <p><a href=""> Our Services</a></p>
+            <p><a href=""> Privacy Policy</a></p>
+        </div>
+        <div class="footer-item">
+            <h2>Get Help </h2>
+            <p><a href=""> FAQ</a></p>
+            <p><a href=""> Shipping </a></p>
+            <p><a href=""> Retuns </a></p>
+            <p><a href=""> Payment Options </a></p>
+        </div>
+        <div class="footer-item">
+            <h2>Online Shop</h2>
+            <p><a href=""> Blogs </a></p>
+            <p><a href=""> Watch </a></p>
+            <p><a href=""> Shoes </a></p>
+            <p><a href=""> Bress </a></p>
+        </div>
+        <div class="footer-item social">
+            <h2> Follow Us </h2>
+            <ul>
+                <li> <i class="fa-brands fa-instagram"></i> </li>
+                <li> <i class="fa-brands fa-linkedin-in"></i> </li>
+                <li> <i class="fa-brands fa-youtube"></i> </li>
+                <li> <i class="fa-brands fa-twitter"></i> </li>
+            </ul>
+        </div>
+    </div>
+    <!---------------------------------------
+                 end of footer 
+    -------------------------------------->
+
+
+    <!---------------------------------------
+               js  of clock
+    -------------------------------------->
+
+
+    <script>
+   // Calling showTime function at every second
+setInterval(showTime, 1000);
+
+// Defining showTime funcion
+function showTime() {
+	// Getting current time and date
+	let time = new Date();
+	let hour = time.getHours();
+	let min = time.getMinutes();
+	let sec = time.getSeconds();
+	am_pm = " AM";
+
+	// Setting time for 12 Hrs format
+	if (hour >= 12) {
+		if (hour > 12) hour -= 12;
+		am_pm = " PM";
+	} else if (hour == 0) {
+		hr = 12;
+		am_pm = " AM";
+	}
+
+	hour =
+		hour < 10 ? "0" + hour : hour;
+	min = min < 10 ? "0" + min : min;
+	sec = sec < 10 ? "0" + sec : sec;
+
+	let currentTime =
+		hour +
+		":" +
+		min +
+		":" +
+		sec +
+		am_pm;
+
+	// Displaying the time
+	document.getElementById(
+		"clock"
+	).innerHTML = currentTime;
+}
+
+showTime();
+
+    </script>
+    <!---------------------------------------
+                 end of clock
+    -------------------------------------->
+</body>
+</html>
